@@ -1,38 +1,36 @@
 package hello;
-import java.util.*;
+import java.util.Scanner;
 
-import java.lang.*;
 
-import java.io.*;
+class Distance {
 
-class Distance{
-	
-public static void main (String[] args) throws java.lang.Exception
-	
-{
+	public static void main(String[] args) throws java.lang.Exception
 
-Scanner sc=new Scanner(System.in);
+	{
 
-int dist=0;
+		Scanner sc = new Scanner(System.in);
 
-String s=sc.nextLine();
+		int dist = 0;
 
-String str1 = sc.nextLine();
-String str2 = sc.nextLine();
+		String s = sc.nextLine();
 
-if(s.indexOf(str1)==-1||s.indexOf(str2)==-1)
+		String str1 = sc.nextLine();
+		String str2 = sc.nextLine();
 
-System.out.println("Invalid Word");
-else
+		if (s.indexOf(str1) == -1 || s.indexOf(str2) == -1)	//Check if both words are present in the sentences
 
-{
+			System.out.println("Invalid Word");
+		else										//finding the distance between two word
 
-dist=Math.abs(s.indexOf(str1)-s.indexOf(str2));
+		{
 
-System.out.println(str1);
-System.out.println(str2);
-System.out.println(dist-1);
+			dist = Math.abs(s.indexOf(str1) - s.indexOf(str2));
 
-}
-}
+			System.out.println(str1);		//printing the words and the distance
+			System.out.println(str2);
+			System.out.println(dist - 1);		
+
+		}
+		sc.close();
+	}
 }
