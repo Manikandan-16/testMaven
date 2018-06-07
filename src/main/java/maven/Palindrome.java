@@ -1,5 +1,7 @@
 package hello;
 
+import java.util.Scanner;
+
 class Palindrome {
 
 	static boolean pal(String str)		//method to check if the passed String is palindrome or not
